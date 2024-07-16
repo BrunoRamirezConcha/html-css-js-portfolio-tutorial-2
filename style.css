@@ -1,98 +1,225 @@
 /* GENERAL */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@media screen () {}
 
 * {
+  box-sizing: border-box;  
   margin: 0;
   padding: 0;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
+/* PAGE TRANSITION */
+
+a {
+  animation: transitionIn 0.5s;
 }
 
-p {
-  color: rgb(85, 85, 85);
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
 }
 
 /* HEADER */
 
-nav,
-.nav-links {
-  display: flex;
+header {
+  background-color: #ffffff;
+  color: #fff;
+  padding-top: 30px;
 }
+
+.logo {
+  display: flex;
+  justify-content: start;
+  font-size: 3rem;
+  padding-left:20px;
+  padding-bottom: 13px;
+  font-weight: 500;
+  height: 100%;
+}
+
+.logo-text {
+  color: rgb(179, 103, 135);
+  text-decoration: none;
+}
+
+/* SUBTITLE */
+
+.subtitle {
+  display: flex;
+  font-size: 1.2rem;
+  color: #818181;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.subtitle a {
+  color: black;
+  text-decoration: none;
+}
+
+.subtitle-container {
+  margin-right: auto;
+  padding-left: 20px;
+}
+
+/* NAV */
 
 nav {
-  justify-content: space-around;
-  align-items: center;
-  height: 17vh;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  margin-top: -30px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0 0px 0px;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color: #818181;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 200;
+  padding-right: 20px;
+}
+
+.this-page {
+  font-weight: 600;
+}
+
+.hover-page {
+  transition: 0.3s;
+}
+
+.hover-page:hover {
+  font-weight: 600;
 }
 
 .nav-links {
-  gap: 60px;
-  list-style: none;
-  font-size: 1.2rem;
+  padding-left: 20px;
 }
 
-a {
-  color: rgb(85, 85, 85);
-  text-decoration: none;
-  text-decoration-color: white;
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
 }
 
-a:hover {
-  color: grey;
-  text-decoration-color: rgb(214, 214, 214);
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+  align-content: center;
+  padding-right: 20px;
 }
 
-.logo {
-  font-size: 3rem;
-}
-
-.logo:hover {
-  cursor: default;
-}
-
-.logo a {
-  color: rgb(85, 85, 85);
-  text-decoration: none;
-  text-underline-offset: 0;
-  text-decoration-color: 0;
-}
-
-.logo {
-  display: flex;
-  margin-top: 1rem;
-  margin-left: 2rem;
-}
-
-/* IMAGE GRID SECTION */
-
-.photo-gallery {
-  display: flex;
-  gap: 0.1rem;
-}
-
-.column {
+.hamburger-icon {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
-  column-gap: 0;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
 }
 
-.photo {
-  position: relative;
-  width: fit-content
-}
-
-.photo__img {
-  display: block;
+.hamburger-icon span {
   width: 100%;
+  height: 2px;
+  background-color: rgb(139, 139, 139);
+  transition: all 0.3 ease-in-out;
 }
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-subtitle-container {
+  margin-right: auto;
+}
+
+/* MAIN */
+
+main {
+  padding-top: 0px;
+}
+
+main h2 {
+  margin-bottom: 0px;
+}
+
+/*                            GRID MAINPAGE                             */
+
 
 .photo__overlay {
   position: absolute;
@@ -100,7 +227,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(0, 0, 0.6);
+  background: rgb(85, 0, 49);
   color: white;
   display: flex;
   flex-direction: column;
@@ -111,7 +238,40 @@ a:hover {
 }
 
 .photo__overlay:hover {
-  opacity: 1;
+  opacity: 0.5;
+}
+
+.work-title {
+  font-weight: 200;
+  font-size: 2.5rem;
+  margin-bottom: -1rem;
+}
+
+.work-subtitle {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+
+.col {
+  display: block;
+  flex: 1;
+  position: relative;
+  object-fit: fill;
+}
+
+.col-image {
+  height: 100%; 
+  width: 100%; 
+  max-width: 100%; 
+  max-height: 100%;
 }
 
 /* ICONS */
@@ -121,13 +281,70 @@ a:hover {
   height: 2rem;
 }
 
+
 /* FOOTER SECTION */
 
-footer {
-  height: 26vh;
-  margin: 0 1rem;
+.footer {
+  padding: 50px 0px  50px
 }
 
-footer p {
-  text-align: center;
+.footer-container {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+  padding: 0 40px 0px;
+}
+
+.footer-container li {
+  margin: 0;
+}
+
+.footer-container a {
+  color: #969696;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.normal-footer {
+  color: #969696;
+}
+
+.hover-footer {
+  transition: 0.5s;
+}
+
+.hover-footer:hover {
+  color: rgb(85, 0, 49);
+}
+
+.socials-footer-container {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+/* WORK - TEMPLATE */
+
+.work-template {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.youtube-video {
+  width: 100%;
+  min-height: 500px;
+  padding-right: 60px;
+
+}
+
+.work-paragraph {
+  max-width: 370px;
 }
