@@ -1,6 +1,6 @@
 @media screen and (max-width: 1400px) {
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 500px) {
     #header-nav {
       display: none;
     }
@@ -22,48 +22,25 @@
     
   }
 
-  @media screen and (max-width: 700px) {
-    #header-nav {
-      display: none;
-    }
-
-    #hamburger-nav {
-      display: flex;
-      justify-content: space-around;
-      background-color: #ffffff;
-      color: #fff;
-      padding: 0;
-      margin: 0;
-      padding-bottom: 10px;
-    }
-
-    .logo {
-      display: flex;
-      padding: 0;
-      margin: 0;
-      font-size: 30px;
-    }
-
-    .subtitle-container {
-      padding: 0;
-      margin: 0;
-    }
-
-    .subtitle {
-      margin-top: -10px;
-      font-size: 14px;
-    }
-
-    .menu-links {
-      display: flex;
-      flex-direction: column;
-      z-index: 1;
-    }
 
     
-
-    
-    @media (max-width: 700px) {
+    @media (max-width: 500px) {
+      #header-nav {
+        display: none;
+      }
+  
+      #hamburger-nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: #ffffff;
+        color: #fff;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 10px;
+      }
+  
+      
+      
       .flex-grid {
         display: block;
         padding: 0px;
