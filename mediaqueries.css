@@ -23,7 +23,8 @@
 
   #hamburger-nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     background-color: #ffffff;
     color: #fff;
     padding-top: 2vh;
@@ -33,18 +34,38 @@
     margin: 0;
   }
   
-.logo-title {
-  font-size: 7.5vw;
-  height: auto;
-  margin-bottom: -0.8vh;
-  font-weight: 500;
+  .logo-title {
+    font-size: 7.5vw;
+    margin-bottom: -0.8vh;
+    font-weight: 500;
 
-}
-.logo-subtitle {
-  font-size: 3vw;
-  height: auto;
-  font-weight: 300;
-}
+  }
+  .logo-subtitle {
+    font-size: 3vw;
+    font-weight: 300;
+  }
+  
+  .menu-hamburguesa {
+    display: flex;
+    flex-direction: column; /* Coloca las líneas verticalmente */
+    justify-content: space-around; /* Espacia las líneas uniformemente */
+    width: 30px; /* Ancho del menú hamburguesa */
+    height: 25px; /* Alto del menú hamburguesa */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+  }
+
+  /* Estilo de las líneas del menú hamburguesa */
+  .menu-hamburguesa .linea {
+    background-color: black; /* Color de las líneas */
+    height: 3px; /* Grosor de las líneas */
+    width: 100%; /* Ancho completo del contenedor */
+    border-radius: 2px; /* Esquinas ligeramente redondeadas */
+  }
+
+
+
+
+
   
   .flex-grid {
     display: block;

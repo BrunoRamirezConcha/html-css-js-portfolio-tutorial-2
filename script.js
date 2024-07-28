@@ -1,9 +1,9 @@
-function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open")
-    icon.classList.toggle("open")
-}
+    
+    <script>
+        document.querySelector('.menu-hamburguesa').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('activo');
+        });
+    </script>
 
 
-
+AAAAAAAAAAAAAAAAAAA

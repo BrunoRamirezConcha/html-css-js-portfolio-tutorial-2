@@ -154,6 +154,45 @@ header {
   display: none;
 }
 
+.hamburger-icon {
+  display: flex;
+  flex-direction: column; /* Coloca las líneas verticalmente */
+  justify-content: space-around; /* Espacia las líneas uniformemente */
+  width: 30px; /* Ancho del menú hamburguesa */
+  height: 25px; /* Alto del menú hamburguesa */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Estilo de las líneas del menú hamburguesa */
+.menu-hamburguesa .linea {
+  background-color: #000; /* Color de las líneas */
+  height: 3px; /* Grosor de las líneas */
+  width: 100%; /* Ancho completo del contenedor */
+  border-radius: 2px; /* Esquinas ligeramente redondeadas */
+}
+
+.menu {
+  display: none; /* Oculta el menú por defecto */
+  flex-direction: column; /* Hace que los ítems del menú se apilen verticalmente */
+}
+
+.menu.activo {
+    display: flex; /* Muestra el menú cuando se agrega la clase 'activo' */
+}
+
+.menu ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding */
+}
+
+.menu li {
+    margin: 10px 0; /* Espacia los ítems del menú */
+}
+
+.menu a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #000; /* Color del texto */
+}
 
 
 /* MAIN */
