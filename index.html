@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bruno Ramirez</title>
     <link rel="icon" type="image/ico" href="assets/">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
@@ -12,55 +12,118 @@
   <body>
         <!--------------------- HEADER ----------------------->
     <header id="header-nav">
+
       <div class="logo-container"> 
         <div class="logo">
           <a class="logo-title"  href="index.html">BRUNO RAMIREZ</a>
-          <a class="logo-subtitle" href="index.html">Animator / Motion Designer</a>
+          <a class="logo-subtitle" href="index.html" data-en="Animator / Motion Designer" data-es="Animador / Motion Designer" >Animator / Motion Designer</a>
 
         </div>
 
+
         <div class="nav-desktop">
-          <a href="index.html" class="this-page">WORK</a>
-          <a href="reel.html"  class="hover-page anim-link">REEL</a>
-          <a href="about.html"  class="hover-page anim-link">ABOUT</a>
-          <a href="contact.html"  class="hover-page anim-link">CONTACT</a>
+          <div  class="lang-container">
+            <button id="btn-en" class="lang-btn-container">
+              <img  src="assets/english-icon.png" alt="">
+            </button>
+            <button  id="btn-es" class="lang-btn-container">
+              <img  src="assets/spanish-icon.png" alt="">
+            </button>
+          </div>
+          <a href="index.html" class="this-page" data-en="WORK" data-es="TRABAJO">WORK</a>
+          <a href="reel.html"  class="hover-page anim-link" data-en="REEL" data-es="REEL">REEL</a>
+          <a href="about.html"  class="hover-page anim-link" data-en="ABOUT" data-es="SOBRE MÍ">ABOUT</a>
+          <a href="contact.html"  class="hover-page anim-link" data-en="CONTACT" data-es="CONTACTO">CONTACT</a>
+        </div>
+
+        
+      </div>
+
+    </header>
+<!----------------------------- HAMBURGER---------------------------- -->
+    <nav class="menu">
+
+      <div class="cross-logo-container">
+        
+        <div class="hamburger-logo"> 
+          <div class="logo">
+            <h1 class="cross-logo-title">BRUNO RAMIREZ</h1>
+            <h1 class="cross-logo-subtitle" data-en="Animator / Motion Designer" data-es="Animador / Motion Designer" >Animator / Motion Designer</h1>
+          </div>
+  
+        </div>
+        <div class="cross-container">
+          <div class="cross">
+            <div class="linea-1"></div>
+            <div class="linea-2"></div>
+            <div class="linea-3"></div>
+          </div>
+  
         </div>
       </div>
 
 
-    </header>
-<!----------------------------- HAMBURGER---------------------------- -->
+
+     <div class="menu-links">
+      <li><a href="index.html" class="this-page-hamburger" data-en="WORK" data-es="TRABAJO">WORK</a></li>
+      <li><a href="reel.html" data-en="REEL" data-es="REEL">REEL</a></li>
+      <li><a href="about.html" data-en="ABOUT" data-es="SOBRE MÍ">ABOUT</a></li>
+      <li><a href="contact.html" data-en="CONTACT" data-es="CONTACTO">CONTACT</a></li>
+
+      <div  class="hamburger-lang-container">
+        <button id="hamburger-btn-en" class="hamburger-lang-btn-container">
+          <img  src="assets/english-icon.png" alt="">
+        </button>
+        <button id="hamburger-btn-es" class="hamburger-lang-btn-container">
+          <img  src="assets/spanish-icon.png" alt="">
+        </button>
+      </div>
+     </div>
+  
+    </nav>
     <nav id="hamburger-nav">
 
       <div class="hamburger-logo"> 
         <div class="logo">
           <a class="logo-title"  href="index.html">BRUNO RAMIREZ</a>
-          <a class="logo-subtitle" href="index.html">Animator / Motion Designer</a>
+          <a class="logo-subtitle" href="index.html" data-en="Animator / Motion Designer" data-es="Animador / Motion Designer">Animator / Motion Designer</a>
         </div>
 
       </div>
 
+
       <div class="menu-hamburguesa">
+        
         <div class="linea"></div>
         <div class="linea"></div>
         <div class="linea"></div>
       </div>
 
-    <nav class="menu">
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Sobre Nosotros</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
+
+
+    <script>
+      document.querySelector('.menu-hamburguesa').addEventListener('click', function() {
+          document.querySelector('.menu').classList.add('activo');
+          document.body.classList.add('no-scroll');
+
+          
+      });
+    </script>
+    <script>
+      document.querySelector('.cross').addEventListener('click', function() {
+          document.querySelector('.menu').classList.remove('activo');
+          document.body.classList.remove('no-scroll');
+      });
+      
+    </script>
+    
+
+    <script src="script.js"></script>
+
+
 
 
     </nav>
-
-    <!-- CREAR NAV EXTERNA PARA HACER MENÚ HAMBURGUESA, CREAR ICONO
-     APARTE DENTRO DEL NAV DE HAMBURGER NAV, AL CLICKEAR APARECE LA NAV EXTERNA, CAPICHE? -->
-
 
   <!--                      GRID MAINPAGE                    -->
 
@@ -68,49 +131,49 @@
       <section id="grid-container">
         <div class="flex-grid">
           <div class="col">
-            <a  href="work_template.html">
-              <img class="col-image" href="work_template.html" src="assets/Thumbnails GIFs/ECONEXUS.gif" alt="img-1">
+            <a  href="econexus.html">
+              <img class="col-image" src="assets/Thumbnails GIFs/ECONEXUS.gif" alt="img-1">
               <div>
                 <div class="photo__overlay">
                   <div class="photo__title"></div>
                   <p class="work-title">ECONEXUS</p>
-                  <p class="work-subtitle">Logo Animation</p>
+                  <p class="work-subtitle" data-en="Logo Animation, Logo Design, Corporate Video" data-es="Animación de Logo, Diseño de Logo, Video Corporativo">Logo Animation, Corporate Video</p>
                 </div>
               </div>
             </a>
           </div>
           <div class="col">
-            <a  href="work_template.html">
-              <img class="col-image" href="work_template.html" src="assets/Thumbnails GIFs/Vulcano Propiedades.gif" alt="img-1">
+            <a  href="vulcanopropiedades-logo.html">
+              <img class="col-image"  src="assets/Thumbnails GIFs/Vulcano Propiedades.gif">
               <div>
                 <div class="photo__overlay">
                   <div class="photo__title"></div>
                   <p class="work-title">Vulcano Propiedades</p>
-                  <p class="work-subtitle">Animated Logo</p>
+                  <p class="work-subtitle" data-en="Logo Animation" data-es="Animación de Logo">Logo Animation</p>
                 </div>
               </div>
             </a>
           </div>
           <div class="col">
-            <a  href="work_template.html">
-              <img class="col-image" href="work_template.html" src="assets/Thumbnails GIFs/13 Perforaciones.gif" alt="img-1">
+            <a  href="13perforaciones.html">
+              <img class="col-image" src="assets/Thumbnails GIFs/13 Perforaciones.gif">
               <div>
                 <div class="photo__overlay">
                   <div class="photo__title"></div>
-                  <p class="work-title">13 Perforaciones</p>
-                  <p class="work-subtitle">Logo Animation</p>
+                  <p class="work-title" data-en="13 Perforaciones" data-es="13 Perforaciones">13 Perforaciones</p>
+                  <p class="work-subtitle" data-en="Logo Animation" data-es="Animación de Logo">Logo Animation</p>
                 </div>
               </div>
             </a>
           </div>
           <div class="col">
-            <a  href="work_template.html">
-              <img class="col-image" href="work_template.html" src="assets/Thumbnails GIFs/Punk Rabbit.gif" alt="img-1">
+            <a  href="punkrabbit.html">
+              <img class="col-image" src="assets/Thumbnails GIFs/Punk Rabbit.gif" alt="img-1">
               <div>
                 <div class="photo__overlay">
                   <div class="photo__title"></div>
                   <p class="work-title">Punk Rabbit</p>
-                  <p class="work-subtitle">Product Animation</p>
+                  <p class="work-subtitle" data-en="Product Animation" data-es="Animación de Producto">Product Animation</p>
                 </div>
               </div>
             </a>
@@ -119,83 +182,85 @@
         </div>
         <div class="flex-grid">
           <div class="col">
-            <a  href="work_template.html">
-              <img class="col-image" href="work_template.html" src="assets/Thumbnails GIFs/A. Verde - Inscripción.gif" alt="img-1">
+            <a  href="alianzaverde_inscripcion.html">
+              <img class="col-image"src="assets/Thumbnails GIFs/A. Verde - Inscripción.gif" alt="img-1">
               <div>
                 <div class="photo__overlay">
                   <div class="photo__title"></div>
                   <p class="work-title">Alianza Verde Popular</p>
-                  <p class="work-subtitle">Explainer Video</p>
+                  <p class="work-subtitle" data-en="Explainer Video" data-es="Explainer Video">Explainer Video</p>
                 </div>
               </div>
             </a>
           </div>
           <div class="col">
-            <a  href="work_template.html">
-              <img class="col-image" href="work_template.html" src="assets/Thumbnails GIFs/A. Verde - Intro.gif" alt="img-1">
+            <a  href="alianzaverde_introduccion.html">
+              <img class="col-image"  src="assets/Thumbnails GIFs/A. Verde - Intro.gif" alt="img-1">
               <div>
                 <div class="photo__overlay">
                   <div class="photo__title"></div>
                   <p class="work-title">Alianza Verde Popular</p>
-                  <p class="work-subtitle">Explainer Video</p>
+                  <p class="work-subtitle" data-en="Explainer Video" data-es="Explainer Video">Explainer Video</p>
                 </div>
               </div>
             </a>
           </div>
 
           <div class="col">
-            <a  href="work_template.html">
-              <img class="col-image" href="work_template.html" src="assets/Thumbnails GIFs/Municipalidad de Macul.gif" alt="img-1">
+            <a  href="alianzaverde_familias.html">
+              <img class="col-image" src="assets/Thumbnails GIFs/A. Verde-Familias.gif" alt="img-1">
+              <div>
+                <div class="photo__overlay">
+                  <div class="photo__title"></div>
+                  <p class="work-title">Alianza Verde Popular</p>
+                  <p class="work-subtitle" data-en="Explainer Video" data-es="Explainer Video">Explainer Video</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col">
+            <a  href="municipalidadmacul_gotita.html">
+              <img class="col-image" src="assets/Thumbnails GIFs/Municipalidad de Macul.gif" alt="img-1">
               <div>
                 <div class="photo__overlay">
                   <div class="photo__title"></div>
                   <p class="work-title">Municipalidad de Macul</p>
-                  <p class="work-subtitle">Character Animation</p>
+                  <p class="work-subtitle" data-en="Character Animation" data-es="Animación de Personaje">Character Animation</p>
                 </div>
               </div>
             </a>
           </div>
+
+
+  
+        </div>
+
+        <div class="flex-grid">
           <div class="col">
-            <a  href="work_template.html">
+            <a  href="metamorfosis.html">
               <img class="col-image" href="work_template.html" src="assets/Thumbnails GIFs/Metamorfosis.gif" alt="img-1">
               <div>
                 <div class="photo__overlay">
                   <div class="photo__title"></div>
-                  <p class="work-title">Francisca Mellado</p>
-                  <p class="work-subtitle">Stop Motion and Digital Animation</p>
+                  <p class="work-title">Colectivo Astropulvis</p>
+                  <p class="work-subtitle" data-en="Stop Motion and Digital Animation" data-es="Stop Motion y Animación Digital">Stop Motion and Digital Animation</p>
                 </div>
               </div>
             </a>
           </div>
-
-  
-        </div>
-        <div class="flex-grid">
           <div class="col">
-            <a  href="work_template.html">
-              <img class="col-image" href="work_template.html" src="assets/Thumbnails GIFs/The Superdrinks.gif" alt="img-1">
+            <a  href="animatedgifs.html">
+              <img class="col-image" src="assets/Thumbnails GIFs/Gifs-Animados.gif" alt="img-1">
               <div>
                 <div class="photo__overlay">
                   <div class="photo__title"></div>
-                  <p class="work-title">The Super Drinks</p>
-                  <p class="work-subtitle">Product Animation</p>
+                  <p class="work-title" data-en="Personal Proyect" data-es="Proyecto Personal" >Personal Proyect</p>
+                  <p class="work-subtitle" data-en="Animated GIFs" data-es="GIFs Animados">Animated GIFs</p>
                 </div>
               </div>
             </a>
           </div>
 
-          <div class="col">
-            <a  href="">
-              <imng class="col-image" href="work_template.html" src= alt="img-1">
-              <div>
-                <div class="">
-                  <div class="photo__title"></div>
-                  <p class="work-title"></p>
-                  <p class="work-subtitle"></p>
-                </div>
-              </div>
-            </a>
-          </div>
           <div class="col">
             <a  href="">
               <imng class="col-image" href="work_template.html" src= alt="img-1">
@@ -229,19 +294,28 @@
     <!--                         FOOTER                          -->
 
     <footer>
-      <div class="socials-footer-container">
-        <img src="assets/linkedin.png" alt="logo lin">
-        <img src="assets/email.png" alt="email">
-        <img src="assets/instagram.png" alt="instagram">
-      </div>
-      <div class="footer-container">
-        <li><a href="index.html" class="normal-footer hover-footer">WORK</a></li>
-        <li><a href="#"  class="hover-footer normal-footer">REEL</a></li>
-        <li><a href="#"  class="hover-footer normal-footer">ABOUT</a></li>
-        <li><a href="#"  class="hover-footer normal-footer">CONTACT</a></li>
-      </div>
-      
-    </footer>
+      <section class="footer">
+          <div class="socials-footer-container">
+            <a href="https://www.linkedin.com/in/bruno-ramirez-1ab7aa142/">
+              <img src="assets/linkedin.png" alt="logo lin">
+            </a>
+            <a href="mailto:bruno.ramirezconcha@gmail.com">
+              <img src="assets/email.png" alt="email">
+            </a>
+            <a href="https://www.instagram.com/bruno.ramirezconcha/">
+              <img src="assets/instagram.png" alt="instagram">
+            </a>
+          </div>
+          <div class="footer-container">
+            <li><a href="index.html" class="this-page-footer" data-en="WORK" data-es="TRABAJO">WORK</a></li>
+            <li><a href="reel.html"  class="hover-footer normal-footer" data-en="REEL" data-es="REEL">REEL</a></li>
+            <li><a href="about.html"  class="hover-footer normal-footer" data-en="ABOUT" data-es="SOBRE MÍ">ABOUT</a></li>
+            <li><a href="contact.html"  class="hover-footer normal-footer" data-en="CONTACT" data-es="CONTACTO">CONTACT</a></li>
+          </div>
+          
+        </section>
+    
+  </footer>
 
     <script src="script.js"></script>
   

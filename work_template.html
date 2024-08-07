@@ -3,60 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>work_template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bruno Ramirez</title>
     <link rel="icon" type="image/ico" href="assets/">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-        <!-- HEADER-SUBTITLE -->
+        <!--------------------- HEADER ----------------------->
         <header id="header-nav">
+
           <div class="logo-container"> 
             <div class="logo">
               <a class="logo-title"  href="index.html">BRUNO RAMIREZ</a>
-              <a class="logo-subtitle" href="index.html">Animator / Motion Designer</a>
+              <a class="logo-subtitle" href="index.html" data-en="Animator / Motion Designer" data-es="Animador / Motion Designer" >Animator / Motion Designer</a>
     
             </div>
+    
     
             <div class="nav-desktop">
-              <a href="index.html" class="this-page">WORK</a>
-              <a href="reel.html"  class="hover-page anim-link">REEL</a>
-              <a href="about.html"  class="hover-page anim-link">ABOUT</a>
-              <a href="contact.html"  class="hover-page anim-link">CONTACT</a>
+              <div  class="lang-container">
+                <button id="btn-en" class="lang-btn-container">
+                  <img  src="assets/english-icon.png" alt="">
+                </button>
+                <button  id="btn-es" class="lang-btn-container">
+                  <img  src="assets/spanish-icon.png" alt="">
+                </button>
+              </div>
+              <a href="index.html" class="this-page" data-en="WORK" data-es="TRABAJO">WORK</a>
+              <a href="reel.html"  class="hover-page anim-link" data-en="REEL" data-es="REEL">REEL</a>
+              <a href="about.html"  class="hover-page anim-link" data-en="ABOUT" data-es="SOBRE MÍ">ABOUT</a>
+              <a href="contact.html"  class="hover-page anim-link" data-en="CONTACT" data-es="CONTACTO">CONTACT</a>
+            </div>
+    
+            
+          </div>
+    
+        </header>
+    <!----------------------------- HAMBURGER---------------------------- -->
+        <nav class="menu">
+    
+          <div class="cross-logo-container">
+            
+            <div class="hamburger-logo"> 
+              <div class="logo">
+                <h1 class="cross-logo-title">BRUNO RAMIREZ</h1>
+                <h1 class="cross-logo-subtitle" data-en="Animator / Motion Designer" data-es="Animador / Motion Designer" >Animator / Motion Designer</h1>
+              </div>
+      
+            </div>
+            <div class="cross-container">
+              <div class="cross">
+                <div class="linea-1"></div>
+                <div class="linea-2"></div>
+                <div class="linea-3"></div>
+              </div>
+      
             </div>
           </div>
     
     
     
-        </header>
+         <div class="menu-links">
+          <li><a href="index.html" class="this-page-hamburger" data-en="WORK" data-es="TRABAJO">WORK</a></li>
+          <li><a href="reel.html" data-en="REEL" data-es="REEL">REEL</a></li>
+          <li><a href="about.html" data-en="ABOUT" data-es="SOBRE MÍ">ABOUT</a></li>
+          <li><a href="contact.html" data-en="CONTACT" data-es="CONTACTO">CONTACT</a></li>
     
-        <nav id="hamburger-nav">
-          <div> 
-            <li id="hamburger-header-nav">
-              <a href="index.html" class="logo logo-text">Bruno Ramirez</a> 
-              <div class="subtitle-container">
-                <a href="index.html" class="subtitle">Animator / Motion Designer</a>
-    
-              </div>
-              
-            </li>
+          <div  class="hamburger-lang-container">
+            <button id="hamburger-btn-en" class="hamburger-lang-btn-container">
+              <img  src="assets/english-icon.png" alt="">
+            </button>
+            <button id="hamburger-btn-es" class="hamburger-lang-btn-container">
+              <img  src="assets/spanish-icon.png" alt="">
+            </button>
           </div>
-          <div class="hamburger-menu">
-              <div class="hamburger-icon" onclick="toggleMenu()">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-              </div>
-              <ul class="menu-links">
-                  <li><a href="index.html"onclick="toggleMenu()">WORK</a></li>
-                  <li><a href="#" onclick="toggleMenu()">REEL</a></li>
-                  <li><a href="#" onclick="toggleMenu()">ABOUT</a></li>
-                  <li><a href="#" onclick="toggleMenu()">CONTACT</a></li>
-              </ul>
-          </div>
+         </div>
+      
         </nav>
-  
+        <nav id="hamburger-nav">
+    
+          <div class="hamburger-logo"> 
+            <div class="logo">
+              <a class="logo-title"  href="index.html">BRUNO RAMIREZ</a>
+              <a class="logo-subtitle" href="index.html" data-en="Animator / Motion Designer" data-es="Animador / Motion Designer">Animator / Motion Designer</a>
+            </div>
+    
+          </div>
+    
+    
+          <div class="menu-hamburguesa">
+            
+            <div class="linea"></div>
+            <div class="linea"></div>
+            <div class="linea"></div>
+          </div>
+    
+    
+    
+        <script>
+          document.querySelector('.menu-hamburguesa').addEventListener('click', function() {
+              document.querySelector('.menu').classList.add('activo');
+              document.body.classList.add('no-scroll');
+    
+              
+            });
+        </script>
+        <script>
+             document.querySelector('.cross').addEventListener('click', function() {
+              document.querySelector('.menu').classList.remove('activo');
+              document.body.classList.remove('no-scroll');
+          });
+        </script>
+
+        
+    
+        <script src="script.js"></script>
+    
+    
+    
+    
+        </nav>
     <main>
 
       <!-- WORK TEMPLATE -->
@@ -65,8 +132,8 @@
         
         <div class="work-template-container">
 
-          <div class="youtube-video">
-            <iframe src="https://www.youtube.com/embed/unegh9i-Nhw?si=zjdF2N1m6kQVCONX" allowfullscreen></iframe>
+          <div class="embedded">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/digzsDLaNOI?si=8bH3vXavoYmRKkYn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
           
 
@@ -86,35 +153,41 @@
             <p>
               
               
-              MENSENs goal is a society where the views on menstruation and the menstrual cycle is open-minded and based on knowledge. Find out more on thier website. </p>
-        </div>
+              MENSENs goal is a society where the views on menstruation a </p>
+          </div>
 
         </div>
 
       </section>
 
-
-
-
-      <section class="footer">
-        <div class="socials-footer-container">
-          <img src="assets/linkedin.png" alt="logo lin">
-          <img src="assets/email.png" alt="email">
-          <img src="assets/github.png" alt="github">
-        </div>
-        <div class="footer-container">
-          <li><a href="index.html" class="normal-footer hover-footer">WORK</a></li>
-          <li><a href="#"  class="hover-footer normal-footer">REEL</a></li>
-          <li><a href="#"  class="hover-footer normal-footer">ABOUT</a></li>
-          <li><a href="#"  class="hover-footer normal-footer">CONTACT</a></li>
-        </div>
-        
-      </section>
     </main> 
 
+    <!--                         FOOTER                          -->
+
     <footer>
-      
-    </footer>
+      <section class="footer">
+          <div class="socials-footer-container">
+            <a href="https://www.linkedin.com/in/bruno-ramirez-1ab7aa142/">
+              <img src="assets/linkedin.png" alt="logo lin">
+            </a>
+            <a href="mailto:bruno.ramirezconcha@gmail.com">
+              <img src="assets/email.png" alt="email">
+            </a>
+            <a href="https://www.instagram.com/bruno.ramirezconcha/">
+              <img src="assets/instagram.png" alt="instagram">
+            </a>
+          </div>
+          <div class="footer-container">
+            <li><a href="index.html" class="this-page-footer" data-en="WORK" data-es="TRABAJO">WORK</a></li>
+            <li><a href="reel.html"  class="hover-footer normal-footer" data-en="REEL" data-es="REEL">REEL</a></li>
+            <li><a href="about.html"  class="hover-footer normal-footer" data-en="ABOUT" data-es="SOBRE MÍ">ABOUT</a></li>
+            <li><a href="contact.html"  class="hover-footer normal-footer" data-en="CONTACT" data-es="CONTACTO">CONTACT</a></li>
+          </div>
+          
+        </section>
+    
+  </footer>
+    <script src="script.js"></script>
   
   </body>
 </html>
