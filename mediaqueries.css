@@ -550,6 +550,19 @@
 
 
 
+.contact {
+  font-size: 1.1rem;
+}
+.contact-title {
+  font-size: 2rem;
+}
+.contact-number {
+  margin-bottom: 3vh
+}
+
+
+
+
 /* --------------------------FOOTER SECTION ---------------------------*/
 
 footer {
@@ -564,6 +577,10 @@ footer {
 
 .socials-footer-container {
   padding-bottom: 4vh;
+}
+
+.socials-footer-container img{
+  height: 2rem;
 }
 
 

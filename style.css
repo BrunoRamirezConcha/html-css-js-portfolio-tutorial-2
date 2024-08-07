@@ -203,7 +203,7 @@ header {
 
 
 .lang-btn-container img{
-  width: 2rem;
+  width: 2.4rem;
   cursor: pointer;
 }
 
@@ -478,6 +478,7 @@ main h2 {
 .work-template-container {
   display: flex;
   justify-content: space-evenly;
+  align-items: flex-start;
   flex-grow: 1;
   padding-left: 6vw;
   padding-right: 6vw;
@@ -486,6 +487,7 @@ main h2 {
   padding-bottom: 6vh;
   gap: 2vw;
 }
+
 
 .embedded {
   display: flex;
@@ -502,11 +504,27 @@ main h2 {
 .embedded iframe {
   max-height: 65vh;
 }
+.embedded video, .embedded object, .embedded embed {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+}
+
+.embedded video {
+  max-height: 65vh;
+}
 
 .work-paragraph {
+  
   flex-wrap: wrap;
   width: 55%;
   height: 100%;
+}
+.work-paragraph img{
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+
 }
 
 .work-paragraph p {
@@ -521,6 +539,8 @@ main h2 {
   padding-bottom: 0;
   font-size: 1.4rem;
 }
+
+
 
 /*---------------------------------REEL-----------------------------*/
 
@@ -680,6 +700,8 @@ footer {
   padding-bottom: 12vh;
   padding-left: 6vw;
   padding-right: 6vw;
+  padding-top: 12vh;
+
 }
 
 .socials-footer-container {
@@ -691,10 +713,11 @@ footer {
   width: 100%;
   gap: 1.5vw;
   padding-bottom: 2vh;
+  
 }
 
 .socials-footer-container img{
-  height: 2rem;
+  height: 2.5rem;
 }
 
 .footer-container {

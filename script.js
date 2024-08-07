@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', adjustLayout);
 document.addEventListener("DOMContentLoaded", function() {
     const btnEn = document.getElementById('btn-en');
     const btnEs = document.getElementById('btn-es');
+    const downloadButtons = document.querySelectorAll('.download-btn');
 
     const changeLanguage = (language) => {
         const elements = document.querySelectorAll('[data-en][data-es]');
@@ -37,6 +38,15 @@ document.addEventListener("DOMContentLoaded", function() {
             element.textContent = element.getAttribute(`data-${language}`);
 
         });
+
+        downloadButtons.forEach(button => {
+            if (language === 'en') {
+                button.href = 'assets/bruno-favicon.ico';
+            } else if (language === 'es') {
+                button.href = 'assets/CV - BRUNO RAMIREZ.pdf';
+            }
+        });
+    
 
         // Añadir clase fadeout para todos los elementos
         document.body.classList.add('fadein');
@@ -51,6 +61,9 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem('language', language);
 
     };
+
+    
+
 
 
     btnEn.addEventListener('click', () => {
@@ -65,12 +78,16 @@ document.addEventListener("DOMContentLoaded", function() {
     if (savedLanguage) {
         changeLanguage(savedLanguage);
     }
+
 });
+
+
 
 // script.js
 document.addEventListener("DOMContentLoaded", function() {
     const btnEn = document.getElementById('hamburger-btn-en');
     const btnEs = document.getElementById('hamburger-btn-es');
+    const downloadButtons = document.querySelectorAll('.download-btn');
 
     const changeLanguage = (language) => {
         const elements = document.querySelectorAll('[data-en][data-es]');
@@ -79,6 +96,14 @@ document.addEventListener("DOMContentLoaded", function() {
         elements.forEach(element => {
             element.textContent = element.getAttribute(`data-${language}`);
 
+        });
+
+        downloadButtons.forEach(button => {
+            if (language === 'en') {
+                button.href = 'assets/bruno-favicon.ico';
+            } else if (language === 'es') {
+                button.href = 'assets/CV - BRUNO RAMIREZ.pdf';
+            }
         });
 
         // Añadir clase fadeout para todos los elementos
@@ -98,11 +123,15 @@ document.addEventListener("DOMContentLoaded", function() {
     btnEn.addEventListener('click', () => {
         changeLanguage('en');
         document.querySelector('.menu').classList.remove('activo');
+        document.body.classList.remove('no-scroll');
+        
     });
 
     btnEs.addEventListener('click', () => {
         changeLanguage('es');
         document.querySelector('.menu').classList.remove('activo');
+        document.body.classList.remove('no-scroll');
+      
     });
 });
 
