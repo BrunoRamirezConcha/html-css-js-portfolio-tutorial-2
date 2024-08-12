@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         downloadButtons.forEach(button => {
             if (language === 'en') {
-                button.href = 'assets/bruno-favicon.ico';
+                button.href = 'assets/RESUME - BRUNO RAMIREZ.pdf';
             } else if (language === 'es') {
                 button.href = 'assets/CV - BRUNO RAMIREZ.pdf';
             }
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         downloadButtons.forEach(button => {
             if (language === 'en') {
-                button.href = 'assets/bruno-favicon.ico';
+                button.href = 'assets/RESUME - BRUNO RAMIREZ.pdf';
             } else if (language === 'es') {
                 button.href = 'assets/CV - BRUNO RAMIREZ.pdf';
             }

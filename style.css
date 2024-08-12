@@ -662,6 +662,7 @@ main h2 {
   padding-right: 1rem;
   padding-left: 1rem;
   transition: all 0.5s; 
+  text-align: center;
 }
 
 .btn:hover {
